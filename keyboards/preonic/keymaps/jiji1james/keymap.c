@@ -26,7 +26,7 @@ enum layers {
 };
 
 // Define custom keycode
-#define SP_CTL CTL_T(KC_SPC)
+#define SP_ALT ALT_T(KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_WIN] = LAYOUT_preonic_grid(
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       KC_LSFT,     KC_Z,        KC_X,        KC_C,        KC_V,        KC_B,                         KC_N,        KC_M,        KC_COMM,     KC_DOT,      KC_SLSH,     KC_ENT,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_RALT,     MO(_FIRST),  SP_CTL,                       KC_SPC,      MO(_SECOND), KC_LGUI,     XXXXXXX,     XXXXXXX,     XXXXXXX
+      XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_LCTL,     MO(_FIRST),  SP_ALT,                       KC_SPC,      MO(_SECOND), KC_LGUI,     XXXXXXX,     XXXXXXX,     XXXXXXX
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
   ),
 
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       KC_LSFT,     KC_Z,        KC_X,        KC_C,        KC_V,        KC_B,                         KC_N,        KC_M,        KC_COMM,     KC_DOT,      KC_SLSH,     KC_ENT,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_RALT,     MO(_FIRST),  SP_CTL,                       KC_SPC,      MO(_SECOND), KC_LCTL,     XXXXXXX,     XXXXXXX,     XXXXXXX
+      XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_LGUI,     MO(_FIRST),  SP_ALT,                       KC_SPC,      MO(_SECOND), KC_LCTL,     XXXXXXX,     XXXXXXX,     XXXXXXX
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
   ),
 
@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       KC_TAB,      KC_1,        KC_2,        KC_3,        KC_4,        KC_5,                         KC_6,        KC_7,        KC_8,        KC_9,        KC_0,        KC_BSPC,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      KC_ESC,      XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                      KC_LEFT,     KC_DOWN,     KC_UP,       KC_RIGHT,    XXXXXXX,     XXXXXXX,
+      KC_ESC,      KC_LEFT,     KC_UP,       KC_DOWN,     KC_RIGHT,    XXXXXXX,                      KC_LEFT,     KC_DOWN,     KC_UP,       KC_RIGHT,    XXXXXXX,     KC_GRV,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      KC_LSFT,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                      KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      XXXXXXX,     XXXXXXX,
+      KC_LSFT,     KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      XXXXXXX,                      KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      XXXXXXX,     KC_TILD,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       XXXXXXX,     XXXXXXX,     XXXXXXX,     _______,     _______,     _______,                      _______,     MO(_THIRD),  _______,     XXXXXXX,     XXXXXXX,     XXXXXXX
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
@@ -78,11 +78,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       KC_TAB,      KC_EXLM,     KC_AT,       KC_HASH,     KC_DLR,      KC_PERC,                      KC_CIRC,     KC_AMPR,     KC_ASTR,     KC_LPRN,     KC_RPRN,     KC_BSPC,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      KC_ESC,      KC_LEFT,     KC_DOWN,     KC_UP,       KC_RIGHT,    XXXXXXX,                      KC_EQL,      KC_MINS,     KC_LBRC,     KC_RBRC,     KC_BSLS,     KC_GRV,
+      KC_ESC,      KC_LEFT,     KC_UP,       KC_DOWN,     KC_RIGHT,    XXXXXXX,                      KC_EQL,      KC_MINS,     KC_LBRC,     KC_RBRC,     KC_BSLS,     KC_GRV,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
       KC_LSFT,     KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      XXXXXXX,                      KC_PLUS,     KC_UNDS,     KC_LCBR,     KC_RCBR,     KC_PIPE,     KC_TILD,
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
-      XXXXXXX,     XXXXXXX,     XXXXXXX,     _______,     MO(_THIRD),  _______,                      _______,      _______,     _______,     XXXXXXX,     XXXXXXX,     XXXXXXX
+      XXXXXXX,     XXXXXXX,     XXXXXXX,     _______,     MO(_THIRD),  _______,                      _______,     _______,     _______,     XXXXXXX,     XXXXXXX,     XXXXXXX
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
   ),
 
@@ -100,3 +100,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------------+------------+------------+------------+------------+--------|                    |------------+------------+------------+------------+------------+--------|
   )
 };
+
